@@ -5,7 +5,7 @@ describe('Start here', () => {
     cy.login(Cypress.env('AUTH_USERNAME'), Cypress.env('AUTH_PASSWORD'));
   });
 
-  it('go to showroom', () => {
+  it('go to showroom page', () => {
     cy.visit('/CYPRESS/showroom/');
     cy.get('[class^=Headersc__StyledHeaderTitle-sc]').should('contain', 'The Digital Showroom');
   });
@@ -50,7 +50,20 @@ describe('Start here', () => {
   });
 
   it('filling customer', () => {
-    
+    cy.get('[class^=CustomerSearchBoxsc__StyledCustomerSearchBoxTop-sc] > :nth-child(3)').should('contain', 'Required');
+    cy.get('#search').type('lake');
+    cy.get('[data-testid="customerSearchBoxList"] > div > div:nth-child(1)').should('exist').click();
+  });
+
+  it('submit the new presentation', () => {
+    cy.get('[data-testid="icon-ArrowRight"]').click();
+  });
+
+  it('verify if presentation is created', () => {
+    cy.get('[data-testid="presentationMenuButton"]').should('exist').click();
+    cy.xpath("//button[normalize-space()='Exit Presentation']").should('exist').click();
+    cy.get('[class^=Headersc__StyledHeaderTitle-sc]').should('contain', 'The Digital Showroom');
+    cy.get('[class^=PresentationsTablesc__StyledInfiniteScroll-sc]').should('contain', 'My new Presentation');
   });
 
 });
