@@ -320,6 +320,11 @@
   "resolved" "https://registry.npmjs.org/cypress-localstorage-commands/-/cypress-localstorage-commands-1.7.0.tgz"
   "version" "1.7.0"
 
+"cypress-xpath@^1.6.2":
+  "integrity" "sha512-mtwJPl840GQPGtb480fKR5vDIcijBHhAVwby5/AIPIT/UVT7UJhM2L42/R+venR7N01I0PoOJErb6UiMbCyUxg=="
+  "resolved" "https://registry.npmjs.org/cypress-xpath/-/cypress-xpath-1.6.2.tgz"
+  "version" "1.6.2"
+
 "cypress@^9.6.1", "cypress@>=2.1.0":
   "integrity" "sha512-ECzmV7pJSkk+NuAhEw6C3D+RIRATkSb2VAHXDY6qGZbca/F9mv5pPsj2LO6Ty6oIFVBTrwCyL9agl28MtJMe2g=="
   "resolved" "https://registry.npmjs.org/cypress/-/cypress-9.6.1.tgz"
