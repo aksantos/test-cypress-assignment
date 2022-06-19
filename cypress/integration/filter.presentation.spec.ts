@@ -20,7 +20,7 @@ describe('Start here', () => {
     cy.get('[class^=AnimatedInputsc__StyledIconButton-sc]').click();
     cy.get('[data-testid="catalogSearchInput"]').type('bot');
     cy.intercept('POST', '/v9/presentation').as('presentationList');
-    cy.wait('@presentationList').its('response.body.data.presentations.list.length').as('responseLength')
+    cy.wait('@presentationList').its('response.body.data.presentations.list.length').as('responseLength');
     cy.get('@responseLength').then((length) => {
       cy.get('[data-testid="presentationList"] > div').its('length').should('eq', length);
     });
