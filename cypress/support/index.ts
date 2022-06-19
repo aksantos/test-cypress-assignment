@@ -20,3 +20,5 @@ import './commands'
 // require('./commands')
 require('cypress-xpath')
 
+// Variables and Constants
+const creationTime = new Date().toISOString()
